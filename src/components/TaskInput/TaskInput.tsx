@@ -21,14 +21,13 @@ const TaskInput: React.FC<TaskInputProps> = (props: TaskInputProps) => {
 
 	return (
 		<div className="TextInput">
-			{/* style={{ marginTop: "1em" }} */}
 			<input
 				type={"text"}
 				className="text-input"
 				name="text-input"
 				placeholder="Type here"
 				ref={input}
-				onKeyDown={handleKeyDown} //onKeyPress maybe?
+				onKeyPress={handleKeyDown}
 			></input>
 		</div>
 	);
