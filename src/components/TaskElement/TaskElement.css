@@ -1,21 +1,44 @@
 .TaskElement {
 	display: flex;
-	align-items: center;
-	width: 100%;
-	/* height: 5em; */
-	background-color: #a5a5a5;
+	justify-content: space-between;
+	width: 97%;
+	background-color: #999999;
 	border-radius: 0.5em;
-	/* padding: 0.5em; */
-	margin: 0.2em 0 0.2em 0;
+	margin: 0.5em 0 0.5em 0;
+	transition: 0.5s ease-out;
+	box-shadow: 0.3em 0.3em #b3b3b3;
+	animation-name: visibility;
+	animation-duration: 0.6s;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .TaskElement > p {
-	padding: 0.5em;
+	padding: 0.7em;
 	margin: 0;
 	text-align: justify;
+	font-weight: 500;
+	top: 0;
 }
 
 .ButtonsContainer {
-	padding-left: 0.7em;
-	padding-right: 0.7em;
+	margin: 0.7em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@keyframes visibility {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.TaskElement > p {
+		word-break: break-all;
+	}
 }

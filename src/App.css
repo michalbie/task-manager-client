@@ -13,5 +13,19 @@ body,
 }
 
 .App > div {
-	width: 50%;
+	position: relative;
+	width: 40%;
+	/* background-color: red; */
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (orientation: portrait) {
+	.App {
+		font-size: 0.8em;
+	}
+
+	.App > div {
+		width: 90%;
+	}
 }

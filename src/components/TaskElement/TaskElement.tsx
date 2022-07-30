@@ -5,31 +5,36 @@ import "./TaskElement.css";
 
 interface TaskElementProps {
 	id: number;
-	text: String;
+	text: string;
 	updateList: (id: number, action: String) => void;
 	status: String;
 }
 
 const TaskElement: React.FC<TaskElementProps> = (props: TaskElementProps) => {
+	const text = useRef<HTMLParagraphElement>(null);
+
 	return (
 		<div className="TaskElement">
-			<p>{props.text}</p>
-			{props.status == "Generated" ? (
-				<div className="ButtonsContainer">
+			<p className="task-text" ref={text}>
+				{props.text}
+			</p>
+
+			<div className="ButtonsContainer">
+				{props.status == "Generated" ? (
 					<TaskButton
 						type={"CONFIRM"}
 						updateList={() => {
 							props.updateList(props.id, "CONFIRM");
 						}}
 					></TaskButton>
-					<TaskButton
-						type={"REMOVE"}
-						updateList={() => {
-							props.updateList(props.id, "REMOVE");
-						}}
-					></TaskButton>
-				</div>
-			) : null}
+				) : null}
+				<TaskButton
+					type={"REMOVE"}
+					updateList={() => {
+						props.updateList(props.id, "REMOVE");
+					}}
+				></TaskButton>
+			</div>
 		</div>
 	);
 };

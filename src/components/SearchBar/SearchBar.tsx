@@ -13,7 +13,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ handleSearchChange }: SearchBarPr
 	};
 
 	return (
-		<div className="TextInput" style={{ width: "50%" }}>
+		<div className="TextInput" style={{ width: "30%", borderRadius: "0.5em" }}>
 			<input
 				type={"text"}
 				className="text-input"

@@ -20,7 +20,8 @@ const TaskInput: React.FC<TaskInputProps> = (props: TaskInputProps) => {
 	};
 
 	return (
-		<div className="TextInput" >
+		<div className="TextInput">
+			{/* style={{ marginTop: "1em" }} */}
 			<input
 				type={"text"}
 				className="text-input"
