@@ -1,0 +1,16 @@
+.TaskButton {
+}
+
+.TaskButton > img {
+	width: 1.5em;
+	height: auto;
+	transition: 0.1s linear;
+}
+
+.TaskButton > img:hover {
+	transform: scale(1.1);
+}
+
+.TaskButton:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.TasksContainer {
+	background-color: #d9d9d9;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 20em;
+	width: 100%;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	overflow-y: auto;
+}
